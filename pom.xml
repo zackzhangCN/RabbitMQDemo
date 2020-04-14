@@ -3,21 +3,28 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 
-	<groupId>com.example</groupId>
-	<artifactId>demo</artifactId>
+	<groupId>cn.cn.cn.zack</groupId>
+	<artifactId>RabbitMQDemo</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>jar</packaging>
+    <modules>
+        <module>RabbitMQ_Provider_DirectExchange</module>
+		<module>RabbitMQ_Consumer_DirectExchange</module>
+	</modules>
+	<!--pom包-->
+    <packaging>pom</packaging>
 
-	<name>demo</name>
-	<description>Demo project for Spring Boot</description>
+	<name>RabbitMQDemo</name>
+	<description>RabbitMQDemo project for Spring Boot</description>
 
+	<!--springboot父依赖-->
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
-		<version>2.0.1.RELEASE</version>
-		<relativePath/> <!-- lookup parent from repository -->
+		<version>2.0.2.RELEASE</version>
+		<relativePath/>
 	</parent>
 
+	<!--字符集合JDK版本-->
 	<properties>
 		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
 		<project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
@@ -25,15 +32,15 @@
 	</properties>
 
 	<dependencies>
+		<!--web-->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
 			<artifactId>spring-boot-starter-web</artifactId>
 		</dependency>
-
+		<!--Rabbit MQ-->
 		<dependency>
 			<groupId>org.springframework.boot</groupId>
-			<artifactId>spring-boot-starter-test</artifactId>
-			<scope>test</scope>
+			<artifactId>spring-boot-starter-amqp</artifactId>
 		</dependency>
 	</dependencies>
 

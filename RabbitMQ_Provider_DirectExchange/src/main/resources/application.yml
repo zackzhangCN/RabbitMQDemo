@@ -1,0 +1,11 @@
+server:
+  port: 8081
+spring:
+  # 应用名
+  application:
+    name: RabbitMQ_Provider_DirectExchange
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    username: guest
+    password: guest
