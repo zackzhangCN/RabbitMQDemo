@@ -1,0 +1,11 @@
+server:
+  port: 8092
+spring:
+  # 应用名
+  application:
+    name: RabbitMQ_Consumer_TopicExchange
+  rabbitmq:
+    host: 127.0.0.1
+    port: 5672
+    username: guest
+    password: guest

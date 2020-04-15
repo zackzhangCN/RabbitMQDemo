@@ -7,9 +7,10 @@
         <groupId>cn.zack</groupId>
         <version>0.0.1-SNAPSHOT</version>
     </parent>
-
     <modelVersion>4.0.0</modelVersion>
-    <artifactId>RabbitMQ_Consumer_DirectExchange</artifactId>
 
-    <packaging>jar</packaging>
+    <groupId>cn.zack</groupId>
+    <artifactId>RabbitMQ_Consumer_TopicExchange</artifactId>
+
+
 </project>
