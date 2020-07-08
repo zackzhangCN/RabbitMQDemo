@@ -6,12 +6,14 @@
 	<groupId>cn.zack</groupId>
 	<artifactId>RabbitMQDemo</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
+
     <modules>
         <module>RabbitMQ_Provider_DirectExchange</module>
 		<module>RabbitMQ_Consumer_DirectExchange</module>
 		<module>RabbitMQ_Provider_TopicExchange</module>
 		<module>RabbitMQ_Consumer_TopicExchange</module>
 	</modules>
+
 	<!--pom包-->
     <packaging>pom</packaging>
 
@@ -54,6 +56,5 @@
 			</plugin>
 		</plugins>
 	</build>
-
 
 </project>
