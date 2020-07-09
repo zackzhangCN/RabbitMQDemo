@@ -9,6 +9,7 @@ spring:
     port: 5672
     username: guest
     password: guest
-    # 开启消息确认(消息生产者发送消息到rabbitmq服务器后, 会被告知是否发送成功)
+    # 开启消息确认(消息发送到交换器的确认)
     publisher-confirms: true
+    # 开启消息确认(消息从交换器路由到队列的确认)
     publisher-returns: true

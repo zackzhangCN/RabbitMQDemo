@@ -54,27 +54,27 @@ public class ProviderMyDirectExchangeConfig implements RabbitTemplate.ConfirmCal
     }
 
     /**
-     * 实现Rabbitmq的ConfirmCallback接口, 开启消息发送成功确认
+     * 实现Rabbitmq的ConfirmCallback接口, 开启消息发送到交换器的确认
      *
      * @param correlationData 消息标识
-     * @param b 是否成功
-     * @param s 失败原因
+     * @param b               是否成功
+     * @param s               失败原因
      */
     @Override
     public void confirm(CorrelationData correlationData, boolean b, String s) {
-        System.out.println("唯一消息标识: " + correlationData);
+        System.out.println("唯一消息标识: " + correlationData.getId());
         System.out.println("确认结果: " + b);
         System.out.println("失败原因: " + s);
     }
 
     /**
-     * 实现Rabbitmq的ReturnCallback接口, 开启消息发送失败返回
+     * 实现Rabbitmq的ReturnCallback接口, 开启消息路由到队列的确认
      *
      * @param message 消息主体
-     * @param i 消息主体
-     * @param s 描述
-     * @param s1 交换器
-     * @param s2 路由键
+     * @param i       消息主体
+     * @param s       描述
+     * @param s1      交换器
+     * @param s2      路由键
      */
     @Override
     public void returnedMessage(Message message, int i, String s, String s1, String s2) {
